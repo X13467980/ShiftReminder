@@ -42,7 +42,7 @@ for day in [5, 20, 6]:
     scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=50)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=55)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=0, minute=45)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=12)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=18)
 
 scheduler.start()
 
@@ -51,5 +51,5 @@ def index():
     return "OK"
 
 if __name__ == "__main__":
-    send_reminder()  # これが先！
+    send_reminder()  
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
