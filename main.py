@@ -50,5 +50,5 @@ def index():
     return "OK"
 
 if __name__ == "__main__":
-    send_reminder()  # テスト配信用
-    app.run(port=5000)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+    send_reminder()  # テスト配信
