@@ -41,8 +41,8 @@ for day in [5, 20, 6]:
     scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=45)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=50)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=55)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=0, minute=45)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=18)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=30)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=28)
 
 scheduler.start()
 
