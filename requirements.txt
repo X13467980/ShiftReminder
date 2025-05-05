@@ -1,0 +1,4 @@
+Flask
+python-dotenv
+apscheduler
+line-bot-sdk==3.*

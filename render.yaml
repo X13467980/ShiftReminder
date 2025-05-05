@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: shift-reminder-bot
+    runtime: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        value: your_line_token_here
