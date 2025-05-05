@@ -45,9 +45,9 @@ for day in [5, 20, 6]:
 
 scheduler.start()
 
-@app.route("/")
+@app.route("/", methods=["GET", "HEAD"])
 def index():
-    return "LINE Broadcast Shift Reminder Bot is running."
+    return "OK"
 
 if __name__ == "__main__":
     send_reminder()  # テスト配信用
