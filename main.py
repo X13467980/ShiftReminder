@@ -30,8 +30,8 @@ def send_reminder():
         except Exception as e:
             print(f"Broadcast failed: {e}")
 
-# 5日と20日 23:00, 23:30, 23:45 に送信
-for day in [5, 20, 6]:
+# スケジューラ設定
+for day in [5, 20]:
     scheduler.add_job(send_reminder, 'cron', day=day, hour=11, minute=0)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=12, minute=0)
     scheduler.add_job(send_reminder, 'cron', day=day, hour=13, minute=0)
