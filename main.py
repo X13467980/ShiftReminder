@@ -32,17 +32,15 @@ def send_reminder():
 
 # 5日と20日 23:00, 23:30, 23:45 に送信
 for day in [5, 20, 6]:
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=20, minute=0)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=21, minute=0)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=22, minute=0)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=0)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=15)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=30)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=45)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=50)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=23, minute=55)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=30)
-    scheduler.add_job(send_reminder, 'cron', day=day, hour=1, minute=28)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=11, minute=0)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=12, minute=0)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=13, minute=0)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=0)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=15)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=30)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=45)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=50)
+    scheduler.add_job(send_reminder, 'cron', day=day, hour=14, minute=55)
 
 scheduler.start()
 
